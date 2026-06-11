@@ -428,7 +428,7 @@
 .mzaCarousel-slide {
   position: absolute;
   top: calc(50% + 5px);
-  left: 50%;
+  left: calc(50% - (var(--mzaC-slideW) / 2));
   width: var(--mzaC-slideW);
   height: min(var(--mzaCardH), calc(100% - 50px));
   transform-style: preserve-3d;
@@ -594,6 +594,42 @@
 .mzaCarousel-slide[data-state="active"] .mzaCard {
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55),
     0 0 0 1px rgba(255, 8, 68, 0.3) inset;
+}
+
+/* Responsividade MzaCarousel */
+@media (max-width: 768px) {
+  .mzaCarousel {
+    height: 60vh;
+    margin: 2rem auto;
+    padding: 0 10px;
+  }
+  .mzaCarousel-prev,
+  .mzaCarousel-next {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    background: rgba(255, 8, 68, 0.4); /* Botões mais visíveis no celular */
+  }
+  .mzaCarousel-prev {
+    margin-left: -5px; /* Empurra pra fora da carta */
+  }
+  .mzaCarousel-next {
+    margin-right: -5px;
+  }
+  .mzaCarousel-pagination {
+    bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mzaCarousel {
+    height: 55vh;
+    min-height: 350px;
+  }
+  :root {
+    --mzaCardH: clamp(280px, 50vh, 400px);
+    --mzaC-slideW: 85vw;
+  }
 }
 
 .mzaPar-1 {

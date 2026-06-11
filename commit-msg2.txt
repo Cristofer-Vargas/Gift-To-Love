@@ -1,5 +1,0 @@
-feat(seo): adiciona meta tags de compartilhamento e refina layout
-
-- adiciona tags Open Graph e Twitter Cards para pré-visualização de links com imagem
-- corrige o corte nas bordas dos leques desativando a restrição de content-visibility
-- atualiza a seleção de fotos e remove os títulos dos cards no carrossel de momentos especiais

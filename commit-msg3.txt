@@ -1,0 +1,5 @@
+fix(ui): centraliza e adiciona responsividade ao carrossel 3d
+
+- recalcula o posicionamento horizontal em telas menores para garantir que as cartas fiquem perfeitamente centralizadas
+- adiciona breakpoints dinâmicos para reduzir altura e margens da galeria em dispositivos móveis
+- reduz tamanho e aplica realce sutil nos botões de controle para melhor usabilidade no toque
