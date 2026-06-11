@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   const canvas = document.getElementById("three-canvas");
   if (!canvas) return;
+
+  // Otimização Extrema para Mobile: Desativar a engine 3D em telas menores que 780px
+  if (window.innerWidth < 780) {
+    canvas.style.display = 'none';
+    return; // Aborta a inicialização do Three.js economizando bateria e memória
+  }
   
   if (window.gsap && window.ScrollTrigger) {
     gsap.registerPlugin(ScrollTrigger);
@@ -226,7 +232,13 @@ document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(animate);
     
     // Otimização pesada: Pausar o renderizador 3D inteiramente se a aba do navegador estiver oculta
-    if (document.hidden) return;
+    // ou se a tela for redimensionada para um tamanho mobile (ex: girar tablet)
+    if (document.hidden || window.innerWidth < 780) {
+      canvas.style.display = 'none';
+      return;
+    } else {
+      canvas.style.display = 'block';
+    }
     
     let velocity = 0;
     if (window.lenis && window.lenis.velocity !== undefined) {

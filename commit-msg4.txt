@@ -1,0 +1,6 @@
+perf(3d): desativa motor gráfico three.js em dispositivos móveis
+
+- implementa abort switch que cancela a inicialização do 3D (WebGL) em telas menores que 780px
+- evita o download do objeto 3D e compilação de shaders no celular para máxima economia de bateria e performance
+- pausa a renderização se um dispositivo maior for redimensionado
+- não afeta as demais animações de scroll da página (GSAP) que continuam fluídas
