@@ -234,7 +234,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const infiniteSlider = section.querySelector('.infinite-slider');
     if (infiniteSlider) {
       const content = infiniteSlider.innerHTML;
-      infiniteSlider.innerHTML = content + content; 
+      // Renomeia o grupo Fancybox nas cópias para evitar que a galeria mostre fotos duplicadas na contagem (ex: 34 em vez de 17)
+      const clonedContent = content.replace(/data-fancybox="infinite"/g, 'data-fancybox="infinite-clone"');
+      infiniteSlider.innerHTML = content + clonedContent; 
       
       const originalWidth = infiniteSlider.scrollWidth / 2;
       const dynamicDuration = originalWidth / 60; 

@@ -1,0 +1,4 @@
+fix(gallery): corrige contagem duplicada de fotos no fancybox da galeria infinita
+
+- altera o atributo data-fancybox dos elementos clonados via javascript para um grupo isolado
+- impede que a biblioteca Fancybox junte as imagens originais com os clones virtuais, mantendo a contagem real e exata de fotos (17 em vez de 34) quando uma imagem é ampliada
