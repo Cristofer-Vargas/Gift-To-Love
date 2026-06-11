@@ -1,0 +1,5 @@
+fix(layout): evita sobreposição entre texto e legenda no carrossel nativo
+
+- aumenta significativamente o padding inferior do conteúdo de texto (panel-content) nas resoluções mobile (768px e 480px)
+- garante que o texto, mesmo com quebra de linhas, não se sobreponha à tooltip flutuante
+- força altura mínima segura nos cards para melhor acomodação visual

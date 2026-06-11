@@ -1,4 +1,0 @@
-fix(layout): ajusta espaçamento e leitura dos cards na sessão nossa história
-
-- adiciona regras de tipografia e padding extras para dispositivos menores (320px)
-- previne o corte do texto inferior pela barra de navegação dos navegadores mobile
