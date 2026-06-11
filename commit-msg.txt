@@ -1,0 +1,9 @@
+feat(core): adiciona estrutura e galeria interativa inicial do projeto
+
+- cria a fundação principal do site de memórias românticas
+- implementa cena 3D interativa usando Three.js com partículas e corações fluídos
+- desenvolve galeria de navegação horizontal com efeito 3D avançado e paralaxe
+- configura a biblioteca Fancybox para visualização de imagens em tela cheia
+- adiciona animações avançadas focadas em scroll usando a biblioteca GSAP
+- aplica otimizações visuais e de performance de GPU para dispositivos móveis
+- modulariza os arquivos de estilização (CSS) e lógica de tela (JS)
