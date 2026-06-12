@@ -618,3 +618,40 @@
   position: relative;
   z-index: 2;
 }
+
+/* --- NARRATIVE TEXT SECTIONS --- */
+.narrative-section {
+  width: 100%;
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  text-align: center;
+  content-visibility: auto;
+  contain-intrinsic-size: 200px;
+}
+
+.narrative-text {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  font-style: italic;
+  font-weight: 300;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.narrative-text strong {
+  color: #ff0844;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .narrative-section {
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+  }
+  .narrative-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+}
